@@ -4,16 +4,25 @@ import AppPresenter from "./AppPresenter";
 import Store from "store";
 
 class AppContainer extends Component {
-  state = {
-    message : 'Hello'
-  };
-  ComponentDidMount = () => {
-    setTimeout(() => {
-      this.setState({
-        message : 'Bye'
-      });
-    }, 2000)
-  };
+  constructor(props){
+    super(props);
+    this._changeMessage = () => {
+      if(this.state.message === "Hello"){
+        this.setState({
+          message : "Bye"
+        });
+      }else {
+        this.setState({
+          message : "Hello"
+        });
+      }
+    };
+
+    this.state = {
+      message : "Hello",
+      changeMessage : this._changeMessage
+    };
+  }
   render() {
     return (
       //redux의 Provider와 같은 기능
