@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-fontawesome": "^1.6.1",
     "react-scripts": "3.0.1",
     "styled-components": "^4.2.1",
     "styled-flex-component": "^3.0.0",
@@ -31,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier-eslint": "^8.8.2"
   }
 }
